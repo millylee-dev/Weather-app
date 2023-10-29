@@ -16,7 +16,7 @@ import javax.inject.Inject
 class MainViewModel @Inject constructor(
     private val weatherRepository: WeatherRepository,
     private val connectivityHelper: ConnectivityHelper
-): ViewModel() {
+) : ViewModel() {
 
     val viewLiveData = MutableLiveData<WeatherFormat>()
 
@@ -59,10 +59,10 @@ class MainViewModel @Inject constructor(
     fun refreshData(cityName: String) = viewModelScope.launch(Dispatchers.IO) {
         _isLoading.postValue(true)
 
-        if(connectivityHelper.isNetworkAvailable()){
+        if (connectivityHelper.isNetworkAvailable()) {
             val response = weatherRepository.getDataService(cityName).execute()
-            if(response.isSuccessful) {
-                response.body()?.let{
+            if (response.isSuccessful) {
+                response.body()?.let {
                     viewLiveData.postValue(it)
                     _cityName.postValue(it.name)
                     _cityCode.postValue(it.sys.country)
