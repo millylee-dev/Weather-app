@@ -40,6 +40,10 @@ class MainViewModel @Inject constructor(
     val degree: LiveData<String>
         get() = _degree
 
+    private val _degreeFeels = MutableLiveData<String>()
+    val degreeFeels: LiveData<String>
+        get() = _degreeFeels
+
     private val _humidity = MutableLiveData<String>()
     val humidity: LiveData<String>
         get() = _humidity
@@ -67,6 +71,7 @@ class MainViewModel @Inject constructor(
                     _cityName.postValue(it.name)
                     _cityCode.postValue(it.sys.country)
                     _degree.postValue(it.main.temp.toString() + "°C")
+                    _degreeFeels.postValue( it.main.feels_like.toString() + "°C")
                     _humidity.postValue(it.main.humidity.toString())
                     _windSpeed.postValue(it.wind.speed.toString())
                     _lat.postValue(it.coord.lat.toString())

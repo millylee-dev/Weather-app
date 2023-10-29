@@ -5,11 +5,9 @@
         android:bottomRightRadius="20dp"
         android:topLeftRadius="20dp"
         android:topRightRadius="20dp" />
-    <solid android:color="#20808080" />
+    <solid android:color="#50808080" />
 
-    <stroke
-        android:width="0.6dp"
-        android:color="#2F4C4C" />
+
 
     <padding
         android:bottom="1dp"
