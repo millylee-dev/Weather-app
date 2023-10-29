@@ -1,6 +1,6 @@
 # Weather-app
 
-## Weather Api Endpoint
+## Weather API Endpoint
 [http://api.openweathermap.org/data/2.5/](http://api.openweathermap.org/data/2.5/)
 
 ## Technologies:
