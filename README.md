@@ -8,10 +8,10 @@
 - Architecture Pattern: MVVM
 - Network library: Retrofit2
 - Network - Concurrency: Kotlin Coroutines 
-- Unit test: Junit4
+- Unit test: Junit4, Mockito
 - Dependency Injection: Hilt
 
 ## Demo:
-https://github.com/millylee-dev/Weather-app/assets/54862190/48a94344-fbc4-458c-8b94-3f83122187aa
+https://github.com/millylee-dev/Weather-app/assets/54862190/88adc939-e047-4f4b-8fb2-d58a2fa7817b
 
 
