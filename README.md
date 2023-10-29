@@ -10,3 +10,8 @@
 - Network - Concurrency: Kotlin Coroutines 
 - Unit test: Junit4
 - Dependency Injection: Hilt
+
+## Demo:
+https://github.com/millylee-dev/Weather-app/assets/54862190/48a94344-fbc4-458c-8b94-3f83122187aa
+
+
