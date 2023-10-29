@@ -52,13 +52,13 @@ class MainViewModel @Inject constructor(
     val windSpeed: LiveData<String>
         get() = _windSpeed
 
-    private val _lat = MutableLiveData<String>()
-    val lat: LiveData<String>
-        get() = _lat
+    private val _description = MutableLiveData<String>()
+    val description: LiveData<String>
+        get() = _description
 
-    private val _lon = MutableLiveData<String>()
-    val lon: LiveData<String>
-        get() = _lon
+    private val _type = MutableLiveData<String>()
+    val type: LiveData<String>
+        get() = _type
 
     fun refreshData(cityName: String) = viewModelScope.launch(Dispatchers.IO) {
         _isLoading.postValue(true)
@@ -74,8 +74,8 @@ class MainViewModel @Inject constructor(
                     _degreeFeels.postValue( it.main.feels_like.toString() + "°C")
                     _humidity.postValue(it.main.humidity.toString())
                     _windSpeed.postValue(it.wind.speed.toString())
-                    _lat.postValue(it.coord.lat.toString())
-                    _lon.postValue(it.coord.lon.toString())
+                    _description.postValue(it.weather.getOrNull(0)?.description)
+                    _type.postValue(it.weather.getOrNull(0)?.main)
                 }
 
                 _isLoadFailed.postValue(false)

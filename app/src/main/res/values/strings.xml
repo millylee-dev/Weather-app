@@ -3,8 +3,8 @@
     <string name="error_msg">Something went wrong, please try again.</string>
     <string name="humidity">Humidity:</string>
     <string name="wind">Wind Speed:</string>
-    <string name="lat">Latitude:</string>
-    <string name="lon">Longitude:</string>
+    <string name="description">Description:</string>
+    <string name="type">Weather type:</string>
     <string name="city_name">City Name</string>
     <string name="feels_like">"Feels like %s"</string>
 </resources>
